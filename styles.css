@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+  body {
+    background: #eee;
+    padding: 0 16px;
+    background-color: #354235;
+    background-color: #ababab;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! *//* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+  
+  header {
+    background-color: #f5ba13;
+    margin: auto -16px;
+    padding: 16px 32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+  
+  header h1 {
+    color: #fff;
+    /* position: absolute; */
+    left: 10px;
+  }
+  
+  header div {
+    position: absolute;
+    right: 20px;
+    top : 20px;
+    font-size: xx-large;
+    color: white;
+    cursor: pointer;
+  }
+  header div img {
+    position: absolute;
+    border-radius: 50%;
+    height: 3rem;
+    right: 10px;
+  }
+  header div p {
+    position: absolute;
+    right: 80px;
+  }
+
+
+  /* ============================= */
+  .note {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    height: 200px; /* Set a fixed height for all notes */
+    overflow: hidden; /* Hide overflow content */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    margin: 10px; /* Add margin for spacing between notes */
+    transition: all 0.3s; /* Smooth transition for expanding */
+    margin: 16px;
+    float: left;
+  }
+  .note:hover {
+    width: 300px; /* Expand width on hover */
+    height: auto; /* Allow height to adjust based on content */
+}
+
+  .note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+  }
+  .note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .note button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: #f5ba13;
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .note {
+    position: relative;
+}
+
+.note img {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    border-radius: 50%;
+    height: 40px;
+}
+
+  form.create-note {
+    position: relative;
+    width: 480px;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+  }
+
+  form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}   
