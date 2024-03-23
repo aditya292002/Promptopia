@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/header';
 import CreateArea from './components/CreateArea';
 import Note from './components/Note';
@@ -7,14 +7,18 @@ import allPrompts from './components/prompts';
 
 function App() {
   const { user, loginWithRedirect, logout } = useAuth0();
-  console.log("Current User : ", user);
-
-  const [prompts, setPrompts] = useState(allPrompts);
   
+  const [prompts, setPrompts] = useState([]);
+
+  useEffect(() => {
+    const storedPrompts = JSON.parse(localStorage.getItem("allPrompts")) || allPrompts;
+    setPrompts(storedPrompts);
+  }, []); // Empty dependency array to run this effect only once on component mount
+
   function addPrompt(newPrompt) {
-    setPrompts(prevPrompts => {
-      return [...prevPrompts, newPrompt];
-    });
+    const updatedPrompts = [...prompts, newPrompt];
+    setPrompts(updatedPrompts);
+    localStorage.setItem("allPrompts", JSON.stringify(updatedPrompts));
   }
 
   return (
